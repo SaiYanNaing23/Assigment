@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-container>
+      <el-col :span="1">
+        <NavVue/>
+      </el-col>
+      <el-col :span="3" class="employee-bg">
+            <Employe/>
+      </el-col>
+      <el-col :span="20" class="table-bg">
+        <DataTable/>
+      </el-col>
+    </el-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DataTable from './components/DataTable.vue';
+import Employe from './components/Employe.vue';
+import NavVue from './components/Nav.vue';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Employe,NavVue,DataTable
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style >
+.employee-bg{
+      background: #F5F5F5;
+}
+.table-bg{
+  background: #F5F5F5;
+  height: 100vh;
 }
 </style>
