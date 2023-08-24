@@ -5,7 +5,7 @@
     <el-row class="left-nav-table">
         <i class="el-icon-back"></i>
         <h4>Employee Directory</h4>
-        <img src="@/assets/general.svg" alt="general">
+        <img src="@/assets/general.svg" class="filter" alt="general">
         <i class="el-icon-search"></i>
         <i class="el-icon-edit" v-if="edit"></i>
     </el-row>
@@ -17,12 +17,12 @@
    <!-- table -->
    <el-table
     :data="tableData"
-    style="width: 100%"
+    style="width: 100%; max-height: 80vh; overflow-y: auto;" 
     stripe
     :cell-style="{padding: '0', height: '55px'}"
     @selection-change="handleSelectionChange"
     class="table-reasponsive"
-    max-height="780"
+    height="780"
     >
     <el-table-column
       type="selection"
@@ -127,7 +127,7 @@
     </el-table-column>
   </el-table>
   <!-- table-bottom -->
-  <el-row>
+  <div>
     <div class="table-bottom-container">
     <div  class="table-bottom">
     <el-button size="small" class="hover-green"> <span class="page ">50/page</span> <i class="el-icon-arrow-down page-down-arrow"></i></el-button>
@@ -144,7 +144,7 @@
     </div>
     </div>
     </div>
-  </el-row>
+  </div>
   </div>
 </template>
 

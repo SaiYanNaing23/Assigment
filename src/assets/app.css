@@ -16,6 +16,7 @@ body{
     color: #757575;
     letter-spacing: 1px;
     word-spacing: 1px;
+    overflow-x: hidden;
 }
 
 h3{
@@ -48,10 +49,14 @@ i{
     padding: 10px 30px;
     white-space: pre;
     background-color: #fff;
+    overflow-y: auto;
 }
 .table-nav{
     padding: 10px 0;
     border-bottom: 1px solid #d6d6d6c7;
+}
+.filter{
+    margin-bottom: 20px;
 }
 .el-icon-back{
     color: #1ED292;
@@ -97,6 +102,7 @@ i{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
+    width: 10px !important;
     background: #1ED292 !important; 
     border-radius: 5px;
   }
@@ -152,5 +158,4 @@ input {
     background-color: #1ED292 !important;
     color: #fff !important;
 }
-
 
